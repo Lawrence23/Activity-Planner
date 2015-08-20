@@ -1,3 +1,86 @@
 .nav-wrapper {
-	background-color: #2962ff;
+	background-color: #448aff;
+}
+
+.nav-wrapper span,
+.nav-wrapper .nav-link li a{
+	color: #fff;
+}
+
+.logo {
+	width: 27%;
+	display: block;
+	position: absolute;
+}
+
+.header-logo {
+	display: block;
+    padding-left: 30%;
+}
+
+.add-category {
+	float: right;
+}
+
+#category-name {
+	width: 85%;
+}
+
+#activity-name {
+	width: 84%;
+}
+
+#edit-category-name {
+	width: 70%;
+}
+
+#edit-activity-name {
+	width: 65%;
+}
+.category-card .card-panel {
+	padding: 0px;
+}
+
+.category-card .card-image {
+	background-color: #448aff;
+	color: #fff;
+	display: flex;
+}
+
+.category-card .card-image input[type=text] {
+	border-bottom: none;
+}
+
+.category-card .card-title,
+.category-card .activity-title {
+	width: 75%;
+    padding-top: 15px;
+}
+
+.category-card .card-title {
+	height: 60px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.category-card .activity-title {
+	
+}
+
+.category-card .card-btn {
+	width: 45px;
+	height: 45px;
+	margin: 5px;
+}
+
+.category-card .card-btn i {
+	line-height: 30px;
+}
+
+.category-card .collection .collection-item {
+	display: flex;
+}
+
+.row .col.s4 {
+	width: 33.32%
 }

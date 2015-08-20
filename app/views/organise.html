@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="input-field col s5 offset-s7">
+        <input id="category-name" type="text" ng-model="category">
+        <label for="categoryname">Add Category</label>
+    	<a class="btn-floating btn-large waves-effect waves-light red" ng-click = "addNewCategory()">
+    		<i class="material-icons">add</i>
+    	</a>
+
+    </div>
+</div>
+
+<div class="row">
+	<category ui-sortable="todoSortable" ng-model="categories"></category>
+</div>

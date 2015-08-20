@@ -1,0 +1,47 @@
+<div class="col s4 category-card" ng-repeat="data in categories track by $index">
+	<div class="card-panel hoverable">
+		<div class="card-image">
+            <div class="card-title">
+                <span ng-hide="edit">{{data.category}}</span>
+                <input id="edit-category-name" type="text" ng-model="data.category" ng-show="edit">
+            </div>
+           	<a class="btn-floating btn-large waves-effect waves-light red card-btn" ng-click="edit=!edit" ng-show="edit">
+               <i class="material-icons">done</i>
+            </a>
+  			<a class="btn-floating btn-large waves-effect waves-light red card-btn" ng-click="edit=!edit" ng-hide="edit">
+                <i class="material-icons">edit</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light red card-btn" ng-click="removeCategory($index)">
+                <i class="material-icons">close</i>
+            </a>
+        </div>
+        <div class="card-content">
+          	<div class="input-field col s12">
+        		<input id="activity-name" type="text" ng-model="activity">
+        		<label for="categoryname">Add Activity</label>
+    			<a class="btn-floating btn-large waves-effect waves-light red" ng-click = "addNewActivity($index, activity)">
+    				<i class="material-icons">add</i>
+    			</a>
+			</div>
+        </div>
+        <div class="card-action">
+          	<ul class="collection">
+                <li class="collection-item" ng-repeat = "li in data.activities track by $index">
+                    <div class="activity-title">
+                        <span ng-hide="actEdit">{{li}}</span>
+                        <input id="edit-activity-name" type="text" ng-model="li" ng-show="actEdit">
+                    </div>
+                    <a class="btn-floating btn-large waves-effect waves-light red card-btn" ng-click="actEdit=!actEdit" ng-show="actEdit">
+                        <i class="material-icons">done</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light red card-btn" ng-click="actEdit=!actEdit" ng-hide="actEdit">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a class="btn-floating btn-large waves-effect waves-light red card-btn" ng-click="removeActivity($index,$parent.$index)">
+                        <i class="material-icons">close</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+	</div>
+</div>
