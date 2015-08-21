@@ -25,7 +25,7 @@
 			</div>
         </div>
         <div class="card-action">
-          	<ul class="collection">
+          	<ul class="collection" ui-sortable="todoSortable" ng-model="data.activities">
                 <li class="collection-item" ng-repeat = "li in data.activities track by $index">
                     <div class="activity-title">
                         <span ng-hide="actEdit">{{li}}</span>
