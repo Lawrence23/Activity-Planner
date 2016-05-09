@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 An Angular application to plan Activities. Each Activity can be categorized under a specific category. Users can add a category and add activites under each category. Users can drag and re-arrange activities or categories according to priority.
 
 Folder Structure;
