@@ -1,6 +1,10 @@
-app.directive("category",function(){
-	return{
-		restrict:"E",
-		templateUrl : "app/views/category.html",
-	}
-});
+(function() {
+	var category = function() {
+		return {
+			restrict:"E",
+			templateUrl : "app/views/category.html"
+		}
+	};
+	angular.module('plannerApp')
+        .directive('category', category);
+})();

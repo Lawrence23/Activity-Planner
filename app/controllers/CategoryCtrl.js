@@ -1,4 +1,5 @@
-app.controller("CategoryCtrl",['$scope','$localStorage',function ($scope, $localStorage) {
+(function() {
+	var CategoryCtrl = function($scope, $localStorage) {
 		$scope.categories = [];
 		$scope.activity;
 		if($localStorage.categories) {
@@ -19,9 +20,10 @@ app.controller("CategoryCtrl",['$scope','$localStorage',function ($scope, $local
 		};
 
 		$scope.addNewActivity = function(index, activity) {
-			$scope.categories[index].activities.push(activity);
-			$scope.activity = "";
+			var activityTemp =  angular.copy(activity);
+			$scope.categories[index].activities.push(activityTemp);
 			$localStorage.categories = $scope.categories;
+			$scope.categories[index].activity = '';
 		};
 
 		$scope.removeActivity = function(index, parent) {
@@ -32,5 +34,7 @@ app.controller("CategoryCtrl",['$scope','$localStorage',function ($scope, $local
 			cursor : "move",
 			tolerance : "intersect"
 		};
-}]);
-
+	};
+	angular.module('plannerApp')
+        .controller('CategoryCtrl', CategoryCtrl);
+})();
